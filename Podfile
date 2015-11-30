@@ -1,11 +1,20 @@
 source 'https://github.com/CocoaPods/Specs.git'
 
-platform :ios, '8.0'
 use_frameworks!
 inhibit_all_warnings!
 
-target 'PMSegmentedControlTests' do
-    pod 'Quick'
-    pod 'Nimble'
-    pod 'Nimble-Snapshots'
+def testing_pods
+  pod 'Quick'
+  pod 'Nimble'
+  pod 'Nimble-Snapshots'
 end
+
+target 'PMSegmentedControlTests-iOS' do
+  platform :ios, '8.0'
+  testing_pods
+end
+
+#target 'PMSegmentedControlTests-tvOS' do
+#  platform :tvos, '9.0'
+#  testing_pods
+#end

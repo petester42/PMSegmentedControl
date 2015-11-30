@@ -14,9 +14,9 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "5527A6641C0CA18900CE1A81"
+               BlueprintIdentifier = "55EE6AF81C0CF23400DFB698"
                BuildableName = "PMSegmentedControl.framework"
-               BlueprintName = "PMSegmentedControl"
+               BlueprintName = "PMSegmentedControl-tvOS"
                ReferencedContainer = "container:PMSegmentedControl.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -29,23 +29,13 @@
       shouldUseLaunchSchemeArgsEnv = "YES"
       codeCoverageEnabled = "YES">
       <Testables>
-         <TestableReference
-            skipped = "NO">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "5527A66E1C0CA18900CE1A81"
-               BuildableName = "PMSegmentedControlTests.xctest"
-               BlueprintName = "PMSegmentedControlTests"
-               ReferencedContainer = "container:PMSegmentedControl.xcodeproj">
-            </BuildableReference>
-         </TestableReference>
       </Testables>
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "5527A6641C0CA18900CE1A81"
+            BlueprintIdentifier = "55EE6AF81C0CF23400DFB698"
             BuildableName = "PMSegmentedControl.framework"
-            BlueprintName = "PMSegmentedControl"
+            BlueprintName = "PMSegmentedControl-tvOS"
             ReferencedContainer = "container:PMSegmentedControl.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
@@ -65,9 +55,9 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "5527A6641C0CA18900CE1A81"
+            BlueprintIdentifier = "55EE6AF81C0CF23400DFB698"
             BuildableName = "PMSegmentedControl.framework"
-            BlueprintName = "PMSegmentedControl"
+            BlueprintName = "PMSegmentedControl-tvOS"
             ReferencedContainer = "container:PMSegmentedControl.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
@@ -83,9 +73,9 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "5527A6641C0CA18900CE1A81"
+            BlueprintIdentifier = "55EE6AF81C0CF23400DFB698"
             BuildableName = "PMSegmentedControl.framework"
-            BlueprintName = "PMSegmentedControl"
+            BlueprintName = "PMSegmentedControl-tvOS"
             ReferencedContainer = "container:PMSegmentedControl.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
