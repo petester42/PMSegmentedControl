@@ -1,12 +1,17 @@
-import UIKit
+import CoreGraphics
+#if os(iOS) || os(watchOS) || os(tvOS)
+    import UIKit
+#elseif os(OSX)
+    import AppKit
+#endif
 
 @IBDesignable
-public final class SegmentedControl: UIControl {
+public final class SegmentedControl: Control {
     
     internal var segments = [SegmentItem]()
     
-    public var didSelectItem: (UIView -> Void)?
-    public var didDeselectItem: (UIView -> Void)?
+    public var didSelectItem: (ViewType -> Void)?
+    public var didDeselectItem: (ViewType -> Void)?
     
     public var selectedSegmentIndex = -1 {
         
@@ -25,7 +30,13 @@ public final class SegmentedControl: UIControl {
                 return
             }
             
-            sendActionsForControlEvents(.ValueChanged)
+            
+            //TODO: fix osx sending events
+            #if os(OSX)
+                
+            #else
+                sendActionsForControlEvents(.ValueChanged)
+            #endif
             
             didSelectItem?(segment.view)
         }
@@ -38,7 +49,7 @@ public final class SegmentedControl: UIControl {
         }
     }
     
-    public init(items: [UIView]) {
+    public init(items: [ViewType]) {
         super.init(frame: CGRectZero)
         
         for var i = 0; i < items.count; ++i {
@@ -60,7 +71,7 @@ public final class SegmentedControl: UIControl {
         updateItems(false)
     }
     
-    public var items: [UIView] {
+    public var items: [ViewType] {
         return segments.map { $0.view }
     }
     
@@ -68,7 +79,7 @@ public final class SegmentedControl: UIControl {
         return segments.count
     }
     
-    public func insertSegment(view: UIView, atIndex segment: Int, animated: Bool) {
+    public func insertSegment(view: ViewType, atIndex segment: Int, animated: Bool) {
         
         removeItemAtIndex(segment)
         addItem(view, atIndex: segment)
@@ -106,13 +117,14 @@ public final class SegmentedControl: UIControl {
         
         removeConstraints(constraints)
         
-        let views = segments.reduce([UIView]()) { views, segment in
+        let views = segments.reduce([ViewType]()) { views, segment in
             segment.view.removeConstraints(segment.view.constraints)
             segment.view.translatesAutoresizingMaskIntoConstraints = false
+            segment.view.wantsLayer = true
             return views + [segment.view]
         }
         
-        var previous: UIView?
+        var previous: ViewType?
         
         for var i = 0; i < views.count; ++i {
             
@@ -152,7 +164,7 @@ public final class SegmentedControl: UIControl {
         }
         
         if animated {
-            UIView.animateWithDuration(0.4, animations: setNeedsLayout)
+            ViewType.animateWithDuration(0.4, animations: setNeedsLayout)
         } else {
             setNeedsLayout()
         }
@@ -166,7 +178,7 @@ public final class SegmentedControl: UIControl {
         }
     }
     
-    private func addItem(item: UIView, atIndex index: Int) {
+    private func addItem(item: ViewType, atIndex index: Int) {
         
         if index >= numberOfSegments {
             segments.append(SegmentItem(item, atIndex: numberOfSegments, selection: selection))

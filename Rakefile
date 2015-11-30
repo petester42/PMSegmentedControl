@@ -12,17 +12,17 @@ end
 
 def schemes
   return {
-    ios: 'PMSegmentedControl',
-    #osx: '',
-    #tvos: ''
+    ios: 'PMSegmentedControl-iOS',
+    osx: 'PMSegmentedControl-Mac',
+    tvos: 'PMSegmentedControl-tvOS'
   }
 end
 
 def sdks
   return {
     ios: 'iphonesimulator9.1',
-    # osx: 'macosx10.11',
-    # tvos: 'appletvsimulator9.0'
+    osx: 'macosx10.11',
+    tvos: 'appletvsimulator9.0'
   }
 end
 

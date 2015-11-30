@@ -1,31 +1,27 @@
-import UIKit
-
 internal final class SegmentItem {
     
-    internal let view: UIView
+    internal let view: ViewType
     internal let index: Int
-    internal let tapGesture = UITapGestureRecognizer()
+    internal lazy var tapGesture: GestureRecognizerType = {
+        return GestureRecognizer(target: self, action: "tap:")
+    }()
     
     internal var selectionAction: (Int -> Void)
     
-    internal init(_ _view: UIView, atIndex _index: Int, selection: (Int -> Void)) {
+    internal init(_ _view: ViewType, atIndex _index: Int, selection: (Int -> Void)) {
         
         view = _view
-        view.addGestureRecognizer(tapGesture)
-        
         index = _index
-        
         selectionAction = selection
-        
-        tapGesture.addTarget(self, action: "tap:")
+
+        view.addGestureRecognizer(tapGesture)
     }
     
     deinit {
-        tapGesture.removeTarget(nil, action: nil)
         view.removeGestureRecognizer(tapGesture)
     }
     
-    dynamic func tap(gesture: UITapGestureRecognizer) {
+    dynamic func tap(gesture: GestureRecognizerType) {
         selectionAction(index)
     }
 }
