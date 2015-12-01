@@ -42,7 +42,7 @@ class SegmentedControlSpec: QuickSpec {
                 
                 segmentControl.insertSegment(view1, atIndex: 0, animated: false)
                 
-                expect(segmentControl) == snapshot("segment_control__insert_one_item")
+                expect(segmentControl) == snapshot()
             }
             
             it("will layout multiple items properly") {
@@ -60,40 +60,17 @@ class SegmentedControlSpec: QuickSpec {
                 segmentControl.insertSegment(view2, atIndex: 1, animated: false)
                 segmentControl.insertSegment(view3, atIndex: 2, animated: false)
                 
-                expect(segmentControl) == snapshot("segment_control__insert_multiple_items")
+                expect(segmentControl) == snapshot()
             }
-            
-            it("will insert an item at index property") {
-                
-                let view1 = UIView()
-                view1.backgroundColor = UIColor.redColor()
-                
-                let view2 = UIView()
-                view2.backgroundColor = UIColor.greenColor()
-                
-                let view3 = UIView()
-                view3.backgroundColor = UIColor.blueColor()
-                
-                segmentControl.insertSegment(view1, atIndex: 0, animated: false)
-                segmentControl.insertSegment(view2, atIndex: 1, animated: false)
-                
-                expect(segmentControl) == snapshot("segment_control__insert_item_before")
-                
-                segmentControl.insertSegment(view3, atIndex: 2, animated: false)
-                
-                expect(segmentControl) == snapshot("segment_control__insert_item_after")
-            }
-            
+        
             it("will insert an item at index property when no segment exists") {
                 
                 let view1 = UIView()
                 view1.backgroundColor = UIColor.redColor()
                 
-                expect(segmentControl) == snapshot("segment_control__insert_single_item_before")
-                
                 segmentControl.insertSegment(view1, atIndex: 0, animated: false)
                 
-                expect(segmentControl) == snapshot("segment_control__insert_single_item_after")
+                expect(segmentControl) == snapshot()
             }
             
             it("will remove an item at index property") {
@@ -110,12 +87,9 @@ class SegmentedControlSpec: QuickSpec {
                 segmentControl.insertSegment(view1, atIndex: 0, animated: false)
                 segmentControl.insertSegment(view2, atIndex: 1, animated: false)
                 segmentControl.insertSegment(view3, atIndex: 2, animated: false)
-                
-                expect(segmentControl) == snapshot("segment_control__remove_item_before")
-                
                 segmentControl.removeSegment(atIndex: 1, animated: false)
                 
-                expect(segmentControl) == snapshot("segment_control__remove_item_after")
+                expect(segmentControl) == snapshot()
             }
             
             it("will remove an item at index properly when only one exists") {
@@ -124,12 +98,9 @@ class SegmentedControlSpec: QuickSpec {
                 view1.backgroundColor = UIColor.redColor()
                 
                 segmentControl.insertSegment(view1, atIndex: 0, animated: false)
-                
-                expect(segmentControl) == snapshot("segment_control__remove_single_item_before")
-                
                 segmentControl.removeSegment(atIndex: 0, animated: false)
                 
-                expect(segmentControl) == snapshot("segment_control__remove_single_item_after")
+                expect(segmentControl) == snapshot()
             }
             
             it("will replace an item at index property") {
@@ -149,12 +120,9 @@ class SegmentedControlSpec: QuickSpec {
                 segmentControl.insertSegment(view1, atIndex: 0, animated: false)
                 segmentControl.insertSegment(view2, atIndex: 1, animated: false)
                 segmentControl.insertSegment(view3, atIndex: 2, animated: false)
-                
-                expect(segmentControl) == snapshot("segment_control__replace_item_before")
-                
                 segmentControl.insertSegment(view4, atIndex: 1, animated: false)
                 
-                expect(segmentControl) == snapshot("segment_control__replace_item_after")
+                expect(segmentControl) == snapshot()
             }
             
             it("will replace an item at index properly when only one segment exists") {
@@ -166,12 +134,9 @@ class SegmentedControlSpec: QuickSpec {
                 view2.backgroundColor = UIColor.greenColor()
                 
                 segmentControl.insertSegment(view1, atIndex: 0, animated: false)
-                
-                expect(segmentControl) == snapshot("segment_control__replace_single_item_before")
-                
                 segmentControl.insertSegment(view2, atIndex: 0, animated: false)
                 
-                expect(segmentControl) == snapshot("segment_control__replace_single_item_after")
+                expect(segmentControl) == snapshot()
             }
             
             it("will remove an item and then insert an item") {
@@ -183,13 +148,10 @@ class SegmentedControlSpec: QuickSpec {
                 view2.backgroundColor = UIColor.greenColor()
                 
                 segmentControl.insertSegment(view1, atIndex: 0, animated: false)
-                
-                expect(segmentControl) == snapshot("segment_control__remove_insert_single_item_before")
-                
                 segmentControl.removeSegment(atIndex: 0, animated: false)
                 segmentControl.insertSegment(view2, atIndex: 0, animated: false)
                 
-                expect(segmentControl) == snapshot("segment_control__remove_insert_single_item_after")
+                expect(segmentControl) == snapshot()
             }
             
             it("will push item if index is out of bounds") {
@@ -197,11 +159,9 @@ class SegmentedControlSpec: QuickSpec {
                 let view1 = UIView()
                 view1.backgroundColor = UIColor.redColor()
                 
-                expect(segmentControl) == snapshot("segment_control__push_item_before")
-                
                 segmentControl.insertSegment(view1, atIndex: 1, animated: false)
                 
-                expect(segmentControl) == snapshot("segment_control__push_item_after")
+                expect(segmentControl) == snapshot()
             }
             
             it("will animate layout") {
@@ -295,17 +255,10 @@ class SegmentedControlSpec: QuickSpec {
             
             it("should highlight the selected segment") {
                 
-                expect(view.segmentControl) == snapshot("segment_control__select_item_before")
-                
                 let segment1 = view.segmentControl.segments[1]
                 segment1.tap(segment1.tapGesture)
                 
-                expect(view.segmentControl) == snapshot("segment_control__select_item_after_first")
-                
-                let segment2 = view.segmentControl.segments[2]
-                segment2.tap(segment2.tapGesture)
-                
-                expect(view.segmentControl) == snapshot("segment_control__select_item_after_second")
+                expect(view.segmentControl) == snapshot()
             }
             
             it("should not select an element when it does not exist") {
