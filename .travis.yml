@@ -5,16 +5,19 @@ env:
   global:
     - LANG=en_US.UTF-8
 
-cache:
-  - bundler
-  - cocoapods
-
 before_install:
   - brew update
   - brew install carthage || brew outdated carthage || brew upgrade carthage
 
 install:
+  - bundle install --without development --deployment --jobs=3 --retry=3
+  - bundle exec pod install
   - carthage bootstrap
+
+cache:
+  directories:
+  - vendor/bundle
+  - Pods
 
 script:
   - rake test
