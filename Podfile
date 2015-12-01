@@ -13,11 +13,6 @@ target 'PMSegmentedControlTests-iOS' do
   testing_pods
 end
 
-target 'PMSegmentedControlTests-Mac' do
-  platform :osx, '10.9'
-  testing_pods
-end
-
 target 'PMSegmentedControlTests-tvOS' do
   platform :tvos, '9.0'
   testing_pods

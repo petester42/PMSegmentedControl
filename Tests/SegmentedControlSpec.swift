@@ -18,12 +18,12 @@ class SegmentedControlSpec: QuickSpec {
         
         describe("segment control layout") {
             
-            var window: WindowType!
+            var window: UIWindow!
             var segmentControl: SegmentedControl!
             
             beforeEach {
                 
-                window = Window(frame: CGRect(x: 0, y: 0, width: 300, height: 50))
+                window = UIWindow(frame: CGRect(x: 0, y: 0, width: 300, height: 50))
                 segmentControl = SegmentedControl(frame: CGRect(x: 0, y: 0, width: 300, height: 50))
                 
                 window.addSubview(segmentControl)
@@ -31,9 +31,9 @@ class SegmentedControlSpec: QuickSpec {
             
             it("will contain the right amount of segments") {
                 
-                segmentControl.insertSegment(View(), atIndex: 0, animated: false)
-                segmentControl.insertSegment(View(), atIndex: 1, animated: false)
-                segmentControl.insertSegment(View(), atIndex: 2, animated: false)
+                segmentControl.insertSegment(UIView(), atIndex: 0, animated: false)
+                segmentControl.insertSegment(UIView(), atIndex: 1, animated: false)
+                segmentControl.insertSegment(UIView(), atIndex: 2, animated: false)
                 
                 expect(segmentControl.items.count) == 3
                 
@@ -48,125 +48,125 @@ class SegmentedControlSpec: QuickSpec {
             
             it("will layout an item properly") {
                 
-                let view1 = View()
-                view1.backgroundColor = Color.redColor()
+                let view1 = UIView()
+                view1.backgroundColor = UIColor.redColor()
                 
                 segmentControl.insertSegment(view1, atIndex: 0, animated: false)
                 
                 expect(segmentControl.segments.atIndex(0)?.view.frame) == CGRect(x: 0, y: 0, width: 300, height: 50)
-                expect(segmentControl.segments.atIndex(0)?.view.backgroundColor) == Color.redColor()
+                expect(segmentControl.segments.atIndex(0)?.view.backgroundColor) == UIColor.redColor()
             }
             
             it("will layout multiple items properly") {
                 
-                let view1 = View()
-                view1.backgroundColor = Color.redColor()
+                let view1 = UIView()
+                view1.backgroundColor = UIColor.redColor()
                 
-                let view2 = View()
-                view2.backgroundColor = Color.greenColor()
+                let view2 = UIView()
+                view2.backgroundColor = UIColor.greenColor()
                 
-                let view3 = View()
-                view3.backgroundColor = Color.blueColor()
+                let view3 = UIView()
+                view3.backgroundColor = UIColor.blueColor()
                 
                 segmentControl.insertSegment(view1, atIndex: 0, animated: false)
                 segmentControl.insertSegment(view2, atIndex: 1, animated: false)
                 segmentControl.insertSegment(view3, atIndex: 2, animated: false)
                 
                 expect(segmentControl.segments.atIndex(0)?.view.frame) == CGRect(x: 0, y: 0, width: 100, height: 50)
-                expect(segmentControl.segments.atIndex(0)?.view.backgroundColor) == Color.redColor()
+                expect(segmentControl.segments.atIndex(0)?.view.backgroundColor) == UIColor.redColor()
                 
                 expect(segmentControl.segments.atIndex(1)?.view.frame) == CGRect(x: 100, y: 0, width: 100, height: 50)
-                expect(segmentControl.segments.atIndex(1)?.view.backgroundColor) == Color.greenColor()
+                expect(segmentControl.segments.atIndex(1)?.view.backgroundColor) == UIColor.greenColor()
                 
                 expect(segmentControl.segments.atIndex(2)?.view.frame) == CGRect(x: 200, y: 0, width: 100, height: 50)
-                expect(segmentControl.segments.atIndex(2)?.view.backgroundColor) == Color.blueColor()
+                expect(segmentControl.segments.atIndex(2)?.view.backgroundColor) == UIColor.blueColor()
             }
             
             it("will insert an item at index property") {
                 
-                let view1 = View()
-                view1.backgroundColor = Color.redColor()
+                let view1 = UIView()
+                view1.backgroundColor = UIColor.redColor()
                 
-                let view2 = View()
-                view2.backgroundColor = Color.greenColor()
+                let view2 = UIView()
+                view2.backgroundColor = UIColor.greenColor()
                 
-                let view3 = View()
-                view3.backgroundColor = Color.blueColor()
+                let view3 = UIView()
+                view3.backgroundColor = UIColor.blueColor()
                 
                 segmentControl.insertSegment(view1, atIndex: 0, animated: false)
                 segmentControl.insertSegment(view2, atIndex: 1, animated: false)
                 
                 expect(segmentControl.segments.atIndex(0)?.view.frame) == CGRect(x: 0, y: 0, width: 150, height: 50)
-                expect(segmentControl.segments.atIndex(0)?.view.backgroundColor) == Color.redColor()
+                expect(segmentControl.segments.atIndex(0)?.view.backgroundColor) == UIColor.redColor()
                 
                 expect(segmentControl.segments.atIndex(1)?.view.frame) == CGRect(x: 150, y: 0, width: 150, height: 50)
-                expect(segmentControl.segments.atIndex(1)?.view.backgroundColor) == Color.greenColor()
+                expect(segmentControl.segments.atIndex(1)?.view.backgroundColor) == UIColor.greenColor()
                 
                 segmentControl.insertSegment(view3, atIndex: 2, animated: false)
                 
                 expect(segmentControl.segments.atIndex(0)?.view.frame) == CGRect(x: 0, y: 0, width: 100, height: 50)
-                expect(segmentControl.segments.atIndex(0)?.view.backgroundColor) == Color.redColor()
+                expect(segmentControl.segments.atIndex(0)?.view.backgroundColor) == UIColor.redColor()
                 
                 expect(segmentControl.segments.atIndex(1)?.view.frame) == CGRect(x: 100, y: 0, width: 100, height: 50)
-                expect(segmentControl.segments.atIndex(1)?.view.backgroundColor) == Color.greenColor()
+                expect(segmentControl.segments.atIndex(1)?.view.backgroundColor) == UIColor.greenColor()
                 
                 expect(segmentControl.segments.atIndex(2)?.view.frame) == CGRect(x: 200, y: 0, width: 100, height: 50)
-                expect(segmentControl.segments.atIndex(2)?.view.backgroundColor) == Color.blueColor()
+                expect(segmentControl.segments.atIndex(2)?.view.backgroundColor) == UIColor.blueColor()
             }
             
             it("will insert an item at index property when no segment exists") {
                 
-                let view1 = View()
-                view1.backgroundColor = Color.redColor()
+                let view1 = UIView()
+                view1.backgroundColor = UIColor.redColor()
                 
                 segmentControl.insertSegment(view1, atIndex: 0, animated: false)
                 
                 expect(segmentControl.segments.atIndex(0)?.view.frame) == CGRect(x: 0, y: 0, width: 300, height: 50)
-                expect(segmentControl.segments.atIndex(0)?.view.backgroundColor) == Color.redColor()
+                expect(segmentControl.segments.atIndex(0)?.view.backgroundColor) == UIColor.redColor()
             }
             
             it("will remove an item at index property") {
                 
-                let view1 = View()
-                view1.backgroundColor = Color.redColor()
+                let view1 = UIView()
+                view1.backgroundColor = UIColor.redColor()
                 
-                let view2 = View()
-                view2.backgroundColor = Color.greenColor()
+                let view2 = UIView()
+                view2.backgroundColor = UIColor.greenColor()
                 
-                let view3 = View()
-                view3.backgroundColor = Color.blueColor()
+                let view3 = UIView()
+                view3.backgroundColor = UIColor.blueColor()
                 
                 segmentControl.insertSegment(view1, atIndex: 0, animated: false)
                 segmentControl.insertSegment(view2, atIndex: 1, animated: false)
                 segmentControl.insertSegment(view3, atIndex: 2, animated: false)
                 
                 expect(segmentControl.segments.atIndex(0)?.view.frame) == CGRect(x: 0, y: 0, width: 100, height: 50)
-                expect(segmentControl.segments.atIndex(0)?.view.backgroundColor) == Color.redColor()
+                expect(segmentControl.segments.atIndex(0)?.view.backgroundColor) == UIColor.redColor()
                 
                 expect(segmentControl.segments.atIndex(1)?.view.frame) == CGRect(x: 100, y: 0, width: 100, height: 50)
-                expect(segmentControl.segments.atIndex(1)?.view.backgroundColor) == Color.greenColor()
+                expect(segmentControl.segments.atIndex(1)?.view.backgroundColor) == UIColor.greenColor()
                 
                 expect(segmentControl.segments.atIndex(2)?.view.frame) == CGRect(x: 200, y: 0, width: 100, height: 50)
-                expect(segmentControl.segments.atIndex(2)?.view.backgroundColor) == Color.blueColor()
+                expect(segmentControl.segments.atIndex(2)?.view.backgroundColor) == UIColor.blueColor()
                 
                 segmentControl.removeSegment(atIndex: 1, animated: false)
                 
                 expect(segmentControl.segments.atIndex(0)?.view.frame) == CGRect(x: 0, y: 0, width: 150, height: 50)
-                expect(segmentControl.segments.atIndex(0)?.view.backgroundColor) == Color.redColor()
+                expect(segmentControl.segments.atIndex(0)?.view.backgroundColor) == UIColor.redColor()
                 
                 expect(segmentControl.segments.atIndex(1)?.view.frame) == CGRect(x: 150, y: 0, width: 150, height: 50)
-                expect(segmentControl.segments.atIndex(1)?.view.backgroundColor) == Color.blueColor()
+                expect(segmentControl.segments.atIndex(1)?.view.backgroundColor) == UIColor.blueColor()
             }
             
             it("will remove an item at index properly when only one exists") {
                 
-                let view1 = View()
-                view1.backgroundColor = Color.redColor()
+                let view1 = UIView()
+                view1.backgroundColor = UIColor.redColor()
                 
                 segmentControl.insertSegment(view1, atIndex: 0, animated: false)
                 
                 expect(segmentControl.segments.atIndex(0)?.view.frame) == CGRect(x: 0, y: 0, width: 300, height: 50)
-                expect(segmentControl.segments.atIndex(0)?.view.backgroundColor) == Color.redColor()
+                expect(segmentControl.segments.atIndex(0)?.view.backgroundColor) == UIColor.redColor()
                 
                 segmentControl.removeSegment(atIndex: 0, animated: false)
                 
@@ -175,114 +175,114 @@ class SegmentedControlSpec: QuickSpec {
             
             it("will replace an item at index property") {
                 
-                let view1 = View()
-                view1.backgroundColor = Color.redColor()
+                let view1 = UIView()
+                view1.backgroundColor = UIColor.redColor()
                 
-                let view2 = View()
-                view2.backgroundColor = Color.greenColor()
+                let view2 = UIView()
+                view2.backgroundColor = UIColor.greenColor()
                 
-                let view3 = View()
-                view3.backgroundColor = Color.blueColor()
+                let view3 = UIView()
+                view3.backgroundColor = UIColor.blueColor()
                 
-                let view4 = View()
-                view4.backgroundColor = Color.orangeColor()
+                let view4 = UIView()
+                view4.backgroundColor = UIColor.orangeColor()
                 
                 segmentControl.insertSegment(view1, atIndex: 0, animated: false)
                 segmentControl.insertSegment(view2, atIndex: 1, animated: false)
                 segmentControl.insertSegment(view3, atIndex: 2, animated: false)
                 
                 expect(segmentControl.segments.atIndex(0)?.view.frame) == CGRect(x: 0, y: 0, width: 100, height: 50)
-                expect(segmentControl.segments.atIndex(0)?.view.backgroundColor) == Color.redColor()
+                expect(segmentControl.segments.atIndex(0)?.view.backgroundColor) == UIColor.redColor()
                 
                 expect(segmentControl.segments.atIndex(1)?.view.frame) == CGRect(x: 100, y: 0, width: 100, height: 50)
-                expect(segmentControl.segments.atIndex(1)?.view.backgroundColor) == Color.greenColor()
+                expect(segmentControl.segments.atIndex(1)?.view.backgroundColor) == UIColor.greenColor()
                 
                 expect(segmentControl.segments.atIndex(2)?.view.frame) == CGRect(x: 200, y: 0, width: 100, height: 50)
-                expect(segmentControl.segments.atIndex(2)?.view.backgroundColor) == Color.blueColor()
+                expect(segmentControl.segments.atIndex(2)?.view.backgroundColor) == UIColor.blueColor()
                 
                 segmentControl.insertSegment(view4, atIndex: 1, animated: false)
                 
                 expect(segmentControl.segments.atIndex(0)?.view.frame) == CGRect(x: 0, y: 0, width: 100, height: 50)
-                expect(segmentControl.segments.atIndex(0)?.view.backgroundColor) == Color.redColor()
+                expect(segmentControl.segments.atIndex(0)?.view.backgroundColor) == UIColor.redColor()
                 
                 expect(segmentControl.segments.atIndex(1)?.view.frame) == CGRect(x: 100, y: 0, width: 100, height: 50)
-                expect(segmentControl.segments.atIndex(1)?.view.backgroundColor) == Color.orangeColor()
+                expect(segmentControl.segments.atIndex(1)?.view.backgroundColor) == UIColor.orangeColor()
                 
                 expect(segmentControl.segments.atIndex(2)?.view.frame) == CGRect(x: 200, y: 0, width: 100, height: 50)
-                expect(segmentControl.segments.atIndex(2)?.view.backgroundColor) == Color.blueColor()
+                expect(segmentControl.segments.atIndex(2)?.view.backgroundColor) == UIColor.blueColor()
             }
             
             it("will replace an item at index properly when only one segment exists") {
                 
-                let view1 = View()
-                view1.backgroundColor = Color.redColor()
+                let view1 = UIView()
+                view1.backgroundColor = UIColor.redColor()
                 
-                let view2 = View()
-                view2.backgroundColor = Color.greenColor()
+                let view2 = UIView()
+                view2.backgroundColor = UIColor.greenColor()
                 
                 segmentControl.insertSegment(view1, atIndex: 0, animated: false)
                 
                 expect(segmentControl.segments.atIndex(0)?.view.frame) == CGRect(x: 0, y: 0, width: 300, height: 50)
-                expect(segmentControl.segments.atIndex(0)?.view.backgroundColor) == Color.redColor()
+                expect(segmentControl.segments.atIndex(0)?.view.backgroundColor) == UIColor.redColor()
                 
                 segmentControl.insertSegment(view2, atIndex: 0, animated: false)
                 
                 expect(segmentControl.segments.atIndex(0)?.view.frame) == CGRect(x: 0, y: 0, width: 300, height: 50)
-                expect(segmentControl.segments.atIndex(0)?.view.backgroundColor) == Color.greenColor()
+                expect(segmentControl.segments.atIndex(0)?.view.backgroundColor) == UIColor.greenColor()
             }
             
             it("will remove an item and then insert an item") {
                 
-                let view1 = View()
-                view1.backgroundColor = Color.redColor()
+                let view1 = UIView()
+                view1.backgroundColor = UIColor.redColor()
                 
-                let view2 = View()
-                view2.backgroundColor = Color.greenColor()
+                let view2 = UIView()
+                view2.backgroundColor = UIColor.greenColor()
                 
                 segmentControl.insertSegment(view1, atIndex: 0, animated: false)
                 
                 expect(segmentControl.segments.atIndex(0)?.view.frame) == CGRect(x: 0, y: 0, width: 300, height: 50)
-                expect(segmentControl.segments.atIndex(0)?.view.backgroundColor) == Color.redColor()
+                expect(segmentControl.segments.atIndex(0)?.view.backgroundColor) == UIColor.redColor()
                 
                 segmentControl.removeSegment(atIndex: 0, animated: false)
                 segmentControl.insertSegment(view2, atIndex: 0, animated: false)
                 
                 expect(segmentControl.segments.atIndex(0)?.view.frame) == CGRect(x: 0, y: 0, width: 300, height: 50)
-                expect(segmentControl.segments.atIndex(0)?.view.backgroundColor) == Color.greenColor()
+                expect(segmentControl.segments.atIndex(0)?.view.backgroundColor) == UIColor.greenColor()
             }
             
             it("will push item if index is out of bounds") {
                 
-                let view1 = View()
-                view1.backgroundColor = Color.redColor()
+                let view1 = UIView()
+                view1.backgroundColor = UIColor.redColor()
                 
                 segmentControl.insertSegment(view1, atIndex: 1, animated: false)
                 
                 expect(segmentControl.segments.atIndex(0)?.view.frame) == CGRect(x: 0, y: 0, width: 300, height: 50)
-                expect(segmentControl.segments.atIndex(0)?.view.backgroundColor) == Color.redColor()
+                expect(segmentControl.segments.atIndex(0)?.view.backgroundColor) == UIColor.redColor()
             }
             
             it("will animate layout") {
                 
-                let view1 = View()
-                view1.backgroundColor = Color.redColor()
+                let view1 = UIView()
+                view1.backgroundColor = UIColor.redColor()
                 
                 segmentControl.insertSegment(view1, atIndex: 0, animated: true)
                 
                 expect(segmentControl.segments.atIndex(0)?.view.frame) == CGRect(x: 0, y: 0, width: 300, height: 50)
-                expect(segmentControl.segments.atIndex(0)?.view.backgroundColor) == Color.redColor()
+                expect(segmentControl.segments.atIndex(0)?.view.backgroundColor) == UIColor.redColor()
             }
             
             it("will layout properly with an offset") {
                 
-                let view1 = View()
-                view1.backgroundColor = Color.redColor()
+                let view1 = UIView()
+                view1.backgroundColor = UIColor.redColor()
                 
-                let view2 = View()
-                view2.backgroundColor = Color.greenColor()
+                let view2 = UIView()
+                view2.backgroundColor = UIColor.greenColor()
                 
-                let view3 = View()
-                view3.backgroundColor = Color.blueColor()
+                let view3 = UIView()
+                view3.backgroundColor = UIColor.blueColor()
                 
                 segmentControl.offset = 30
                 
@@ -291,34 +291,34 @@ class SegmentedControlSpec: QuickSpec {
                 segmentControl.insertSegment(view3, atIndex: 2, animated: false)
                 
                 expect(segmentControl.segments.atIndex(0)?.view.frame) == CGRect(x: 0, y: 0, width: 80, height: 50)
-                expect(segmentControl.segments.atIndex(0)?.view.backgroundColor) == Color.redColor()
+                expect(segmentControl.segments.atIndex(0)?.view.backgroundColor) == UIColor.redColor()
                 
                 expect(segmentControl.segments.atIndex(1)?.view.frame) == CGRect(x: 110, y: 0, width: 80, height: 50)
-                expect(segmentControl.segments.atIndex(1)?.view.backgroundColor) == Color.greenColor()
+                expect(segmentControl.segments.atIndex(1)?.view.backgroundColor) == UIColor.greenColor()
                 
                 expect(segmentControl.segments.atIndex(2)?.view.frame) == CGRect(x: 220, y: 0, width: 80, height: 50)
-                expect(segmentControl.segments.atIndex(2)?.view.backgroundColor) == Color.blueColor()
+                expect(segmentControl.segments.atIndex(2)?.view.backgroundColor) == UIColor.blueColor()
             }
         }
         
         describe("segment control initializers") {
             
-            var window: WindowType!
+            var window: UIWindow!
             
             beforeEach {
-                window = Window(frame: CGRect(x: 0, y: 0, width: 300, height: 50))
+                window = UIWindow(frame: CGRect(x: 0, y: 0, width: 300, height: 50))
             }
             
             it("will initialized with views properly") {
                 
-                let view1 = View()
-                view1.backgroundColor = Color.redColor()
+                let view1 = UIView()
+                view1.backgroundColor = UIColor.redColor()
                 
-                let view2 = View()
-                view2.backgroundColor = Color.greenColor()
+                let view2 = UIView()
+                view2.backgroundColor = UIColor.greenColor()
                 
-                let view3 = View()
-                view3.backgroundColor = Color.blueColor()
+                let view3 = UIView()
+                view3.backgroundColor = UIColor.blueColor()
                 
                 let segmentControl = SegmentedControl(items: [view1, view2, view3])
                 segmentControl.frame = CGRect(x: 0, y: 0, width: 300, height: 50)
@@ -328,13 +328,13 @@ class SegmentedControlSpec: QuickSpec {
                 segmentControl.layoutSubviews()
                 
                 expect(segmentControl.segments.atIndex(0)?.view.frame) == CGRect(x: 0, y: 0, width: 100, height: 50)
-                expect(segmentControl.segments.atIndex(0)?.view.backgroundColor) == Color.redColor()
+                expect(segmentControl.segments.atIndex(0)?.view.backgroundColor) == UIColor.redColor()
                 
                 expect(segmentControl.segments.atIndex(1)?.view.frame) == CGRect(x: 100, y: 0, width: 100, height: 50)
-                expect(segmentControl.segments.atIndex(1)?.view.backgroundColor) == Color.greenColor()
+                expect(segmentControl.segments.atIndex(1)?.view.backgroundColor) == UIColor.greenColor()
                 
                 expect(segmentControl.segments.atIndex(2)?.view.frame) == CGRect(x: 200, y: 0, width: 100, height: 50)
-                expect(segmentControl.segments.atIndex(2)?.view.backgroundColor) == Color.blueColor()
+                expect(segmentControl.segments.atIndex(2)?.view.backgroundColor) == UIColor.blueColor()
             }
             
             it("will initialized with views properly") {
@@ -348,11 +348,11 @@ class SegmentedControlSpec: QuickSpec {
         
         describe("segment control selection") {
             
-            var window: WindowType!
+            var window: UIWindow!
             var view: MockSegmentView!
             
             beforeEach {
-                window = Window(frame: CGRect(x: 0, y: 0, width: 300, height: 50))
+                window = UIWindow(frame: CGRect(x: 0, y: 0, width: 300, height: 50))
                 view = MockSegmentView()
                 window.addSubview(view)
                 view.segmentControl.layoutSubviews()
@@ -372,37 +372,37 @@ class SegmentedControlSpec: QuickSpec {
             it("should highlight the selected segment") {
                 
                 expect(view.segmentControl.segments.atIndex(0)?.view.frame) == CGRect(x: 0, y: 0, width: 100, height: 50)
-                expect(view.segmentControl.segments.atIndex(0)?.view.backgroundColor) == Color.blueColor()
+                expect(view.segmentControl.segments.atIndex(0)?.view.backgroundColor) == UIColor.blueColor()
                 
                 expect(view.segmentControl.segments.atIndex(1)?.view.frame) == CGRect(x: 100, y: 0, width: 100, height: 50)
-                expect(view.segmentControl.segments.atIndex(1)?.view.backgroundColor) == Color.blueColor()
+                expect(view.segmentControl.segments.atIndex(1)?.view.backgroundColor) == UIColor.blueColor()
                 
                 expect(view.segmentControl.segments.atIndex(2)?.view.frame) == CGRect(x: 200, y: 0, width: 100, height: 50)
-                expect(view.segmentControl.segments.atIndex(2)?.view.backgroundColor) == Color.blueColor()
+                expect(view.segmentControl.segments.atIndex(2)?.view.backgroundColor) == UIColor.blueColor()
                 
                 let segment1 = view.segmentControl.segments[1]
                 segment1.tap(segment1.tapGesture)
                 
                 expect(view.segmentControl.segments.atIndex(0)?.view.frame) == CGRect(x: 0, y: 0, width: 100, height: 50)
-                expect(view.segmentControl.segments.atIndex(0)?.view.backgroundColor) == Color.blueColor()
+                expect(view.segmentControl.segments.atIndex(0)?.view.backgroundColor) == UIColor.blueColor()
                 
                 expect(view.segmentControl.segments.atIndex(1)?.view.frame) == CGRect(x: 100, y: 0, width: 100, height: 50)
-                expect(view.segmentControl.segments.atIndex(1)?.view.backgroundColor) == Color.redColor()
+                expect(view.segmentControl.segments.atIndex(1)?.view.backgroundColor) == UIColor.redColor()
                 
                 expect(view.segmentControl.segments.atIndex(2)?.view.frame) == CGRect(x: 200, y: 0, width: 100, height: 50)
-                expect(view.segmentControl.segments.atIndex(2)?.view.backgroundColor) == Color.blueColor()
+                expect(view.segmentControl.segments.atIndex(2)?.view.backgroundColor) == UIColor.blueColor()
                 
                 let segment2 = view.segmentControl.segments[2]
                 segment2.tap(segment2.tapGesture)
                 
                 expect(view.segmentControl.segments.atIndex(0)?.view.frame) == CGRect(x: 0, y: 0, width: 100, height: 50)
-                expect(view.segmentControl.segments.atIndex(0)?.view.backgroundColor) == Color.blueColor()
+                expect(view.segmentControl.segments.atIndex(0)?.view.backgroundColor) == UIColor.blueColor()
                 
                 expect(view.segmentControl.segments.atIndex(1)?.view.frame) == CGRect(x: 100, y: 0, width: 100, height: 50)
-                expect(view.segmentControl.segments.atIndex(1)?.view.backgroundColor) == Color.blueColor()
+                expect(view.segmentControl.segments.atIndex(1)?.view.backgroundColor) == UIColor.blueColor()
                 
                 expect(view.segmentControl.segments.atIndex(2)?.view.frame) == CGRect(x: 200, y: 0, width: 100, height: 50)
-                expect(view.segmentControl.segments.atIndex(2)?.view.backgroundColor) == Color.redColor()
+                expect(view.segmentControl.segments.atIndex(2)?.view.backgroundColor) == UIColor.redColor()
             }
             
             it("should not select an element when it does not exist") {
@@ -415,7 +415,7 @@ class SegmentedControlSpec: QuickSpec {
     }
 }
 
-public class MockSegmentView: View {
+public class MockSegmentView: UIView {
     
     public var segmentControl: SegmentedControl!
     public var selections = [Int]()
@@ -423,14 +423,14 @@ public class MockSegmentView: View {
     public init() {
         super.init(frame: CGRectMake(0, 0, 300, 50))
         
-        let view1 = View()
-        view1.backgroundColor = Color.blueColor()
+        let view1 = UIView()
+        view1.backgroundColor = UIColor.blueColor()
         
-        let view2 = View()
-        view2.backgroundColor = Color.blueColor()
+        let view2 = UIView()
+        view2.backgroundColor = UIColor.blueColor()
         
-        let view3 = View()
-        view3.backgroundColor = Color.blueColor()
+        let view3 = UIView()
+        view3.backgroundColor = UIColor.blueColor()
         
         segmentControl = SegmentedControl(frame: bounds)
         addSubview(segmentControl)
@@ -440,7 +440,7 @@ public class MockSegmentView: View {
         segmentControl.insertSegment(view3, atIndex: 2, animated: false)
         
         segmentControl.didSelectItem = { [weak self] item in
-            item.backgroundColor = Color.redColor()
+            item.backgroundColor = UIColor.redColor()
             
             guard let strongSelf = self else {
                 return
@@ -450,7 +450,7 @@ public class MockSegmentView: View {
         }
         
         segmentControl.didDeselectItem = { item in
-            item.backgroundColor = Color.blueColor()
+            item.backgroundColor = UIColor.blueColor()
         }
     }
     
