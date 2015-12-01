@@ -7,18 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4BDBF5F57B5E4ADCBD437CDB /* Pods_PMSegmentedControlTests_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5FBF6558CEF3A40F4E0342D8 /* Pods_PMSegmentedControlTests_iOS.framework */; };
 		5527A6701C0CA18900CE1A81 /* PMSegmentedControl.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5527A6651C0CA18900CE1A81 /* PMSegmentedControl.framework */; };
 		55DCEDCC1C0CA21200FA0F53 /* PMSegmentedControl.h in Headers */ = {isa = PBXBuildFile; fileRef = 55DCEDC71C0CA21200FA0F53 /* PMSegmentedControl.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		55DCEDCF1C0CA21B00FA0F53 /* SegmentedControlSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55DCEDCA1C0CA21200FA0F53 /* SegmentedControlSpec.swift */; };
 		55DCEDD51C0CA2A900FA0F53 /* SegmentedControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55DCEDD21C0CA2A900FA0F53 /* SegmentedControl.swift */; };
 		55DCEDD91C0CA31800FA0F53 /* SegmentItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55DCEDD81C0CA31800FA0F53 /* SegmentItem.swift */; };
-		55EE6B031C0CF23400DFB698 /* PMSegmentedControl.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 55EE6AF91C0CF23400DFB698 /* PMSegmentedControl.framework */; };
-		55EE6B101C0CF2E000DFB698 /* PMSegmentedControl.h in Headers */ = {isa = PBXBuildFile; fileRef = 55DCEDC71C0CA21200FA0F53 /* PMSegmentedControl.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		55EE6B111C0CF30000DFB698 /* SegmentItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55DCEDD81C0CA31800FA0F53 /* SegmentItem.swift */; };
-		55EE6B121C0CF30000DFB698 /* SegmentedControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55DCEDD21C0CA2A900FA0F53 /* SegmentedControl.swift */; };
-		55EE6B131C0CF30400DFB698 /* SegmentedControlSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55DCEDCA1C0CA21200FA0F53 /* SegmentedControlSpec.swift */; };
-		A7A63D0233D1D76DB8120247 /* Pods_PMSegmentedControlTests_tvOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BAC27CEDBC7296B54B73DC34 /* Pods_PMSegmentedControlTests_tvOS.framework */; };
-		CFEC18F0053B4CF3A24016C5 /* Pods_PMSegmentedControlTests_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 654410FC23B8B03FE92A99A8 /* Pods_PMSegmentedControlTests_iOS.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,19 +23,9 @@
 			remoteGlobalIDString = 5527A6641C0CA18900CE1A81;
 			remoteInfo = PMSegmentedControl;
 		};
-		55EE6B041C0CF23400DFB698 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 5527A65C1C0CA18900CE1A81 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 55EE6AF81C0CF23400DFB698;
-			remoteInfo = "PMSegmentedControl-tvOS";
-		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		17D74330445D805BF0C416D3 /* Pods-PMSegmentedControlTests-tvOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PMSegmentedControlTests-tvOS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PMSegmentedControlTests-tvOS/Pods-PMSegmentedControlTests-tvOS.debug.xcconfig"; sourceTree = "<group>"; };
-		26ACE1AAC44F37B9C54F66CE /* Pods-PMSegmentedControlTests-iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PMSegmentedControlTests-iOS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PMSegmentedControlTests-iOS/Pods-PMSegmentedControlTests-iOS.debug.xcconfig"; sourceTree = "<group>"; };
-		416D07183D9D52EC52156301 /* Pods-PMSegmentedControlTests-iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PMSegmentedControlTests-iOS.release.xcconfig"; path = "Pods/Target Support Files/Pods-PMSegmentedControlTests-iOS/Pods-PMSegmentedControlTests-iOS.release.xcconfig"; sourceTree = "<group>"; };
 		5527A6651C0CA18900CE1A81 /* PMSegmentedControl.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = PMSegmentedControl.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5527A66F1C0CA18900CE1A81 /* PMSegmentedControl-Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "PMSegmentedControl-Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		55DCEDC61C0CA21200FA0F53 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -50,11 +34,9 @@
 		55DCEDCA1C0CA21200FA0F53 /* SegmentedControlSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SegmentedControlSpec.swift; sourceTree = "<group>"; };
 		55DCEDD21C0CA2A900FA0F53 /* SegmentedControl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SegmentedControl.swift; sourceTree = "<group>"; };
 		55DCEDD81C0CA31800FA0F53 /* SegmentItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SegmentItem.swift; sourceTree = "<group>"; };
-		55EE6AF91C0CF23400DFB698 /* PMSegmentedControl.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = PMSegmentedControl.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		55EE6B021C0CF23400DFB698 /* PMSegmentedControl-Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "PMSegmentedControl-Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		654410FC23B8B03FE92A99A8 /* Pods_PMSegmentedControlTests_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PMSegmentedControlTests_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		BAC27CEDBC7296B54B73DC34 /* Pods_PMSegmentedControlTests_tvOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PMSegmentedControlTests_tvOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		D62DF223D0F41710CB089A8A /* Pods-PMSegmentedControlTests-tvOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PMSegmentedControlTests-tvOS.release.xcconfig"; path = "Pods/Target Support Files/Pods-PMSegmentedControlTests-tvOS/Pods-PMSegmentedControlTests-tvOS.release.xcconfig"; sourceTree = "<group>"; };
+		5FBF6558CEF3A40F4E0342D8 /* Pods_PMSegmentedControlTests_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PMSegmentedControlTests_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8CEA0CB9B0D3B039B12B8397 /* Pods-PMSegmentedControlTests-iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PMSegmentedControlTests-iOS.release.xcconfig"; path = "Pods/Target Support Files/Pods-PMSegmentedControlTests-iOS/Pods-PMSegmentedControlTests-iOS.release.xcconfig"; sourceTree = "<group>"; };
+		D7782E5C2A4A9EEED84D28D2 /* Pods-PMSegmentedControlTests-iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PMSegmentedControlTests-iOS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PMSegmentedControlTests-iOS/Pods-PMSegmentedControlTests-iOS.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,57 +52,21 @@
 			buildActionMask = 2147483647;
 			files = (
 				5527A6701C0CA18900CE1A81 /* PMSegmentedControl.framework in Frameworks */,
-				CFEC18F0053B4CF3A24016C5 /* Pods_PMSegmentedControlTests_iOS.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		55EE6AF51C0CF23400DFB698 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		55EE6AFF1C0CF23400DFB698 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				55EE6B031C0CF23400DFB698 /* PMSegmentedControl.framework in Frameworks */,
-				A7A63D0233D1D76DB8120247 /* Pods_PMSegmentedControlTests_tvOS.framework in Frameworks */,
+				4BDBF5F57B5E4ADCBD437CDB /* Pods_PMSegmentedControlTests_iOS.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		26FBE6D8D70AC74A57F788E8 /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				26ACE1AAC44F37B9C54F66CE /* Pods-PMSegmentedControlTests-iOS.debug.xcconfig */,
-				416D07183D9D52EC52156301 /* Pods-PMSegmentedControlTests-iOS.release.xcconfig */,
-				17D74330445D805BF0C416D3 /* Pods-PMSegmentedControlTests-tvOS.debug.xcconfig */,
-				D62DF223D0F41710CB089A8A /* Pods-PMSegmentedControlTests-tvOS.release.xcconfig */,
-			);
-			name = Pods;
-			sourceTree = "<group>";
-		};
-		2B7D3D4BB26FAE222C86AA79 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				654410FC23B8B03FE92A99A8 /* Pods_PMSegmentedControlTests_iOS.framework */,
-				BAC27CEDBC7296B54B73DC34 /* Pods_PMSegmentedControlTests_tvOS.framework */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
 		5527A65B1C0CA18900CE1A81 = {
 			isa = PBXGroup;
 			children = (
 				5527A6661C0CA18900CE1A81 /* Products */,
 				55DCEDC51C0CA21200FA0F53 /* Source */,
 				55DCEDC81C0CA21200FA0F53 /* Tests */,
-				26FBE6D8D70AC74A57F788E8 /* Pods */,
-				2B7D3D4BB26FAE222C86AA79 /* Frameworks */,
+				F5A9BADD6026BC45B7237972 /* Pods */,
+				7AB4308EC9C6C0052B73A4C9 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -129,8 +75,6 @@
 			children = (
 				5527A6651C0CA18900CE1A81 /* PMSegmentedControl.framework */,
 				5527A66F1C0CA18900CE1A81 /* PMSegmentedControl-Tests.xctest */,
-				55EE6AF91C0CF23400DFB698 /* PMSegmentedControl.framework */,
-				55EE6B021C0CF23400DFB698 /* PMSegmentedControl-Tests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -171,6 +115,23 @@
 			path = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		7AB4308EC9C6C0052B73A4C9 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				5FBF6558CEF3A40F4E0342D8 /* Pods_PMSegmentedControlTests_iOS.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F5A9BADD6026BC45B7237972 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				D7782E5C2A4A9EEED84D28D2 /* Pods-PMSegmentedControlTests-iOS.debug.xcconfig */,
+				8CEA0CB9B0D3B039B12B8397 /* Pods-PMSegmentedControlTests-iOS.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -179,14 +140,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				55DCEDCC1C0CA21200FA0F53 /* PMSegmentedControl.h in Headers */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		55EE6AF61C0CF23400DFB698 /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				55EE6B101C0CF2E000DFB698 /* PMSegmentedControl.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -215,12 +168,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 5527A67C1C0CA18900CE1A81 /* Build configuration list for PBXNativeTarget "PMSegmentedControlTests-iOS" */;
 			buildPhases = (
-				94ADDAB923D299BE9C1E165E /* Check Pods Manifest.lock */,
+				D1BCDD6EEED4A918C07D1AAB /* Check Pods Manifest.lock */,
 				5527A66B1C0CA18900CE1A81 /* Sources */,
 				5527A66C1C0CA18900CE1A81 /* Frameworks */,
 				5527A66D1C0CA18900CE1A81 /* Resources */,
-				FAC8BAD045584BEABEE8100A /* Embed Pods Frameworks */,
-				32386645AA811A89A5F371FB /* Copy Pods Resources */,
+				1F20ED76EF1742B8134EEDA1 /* Embed Pods Frameworks */,
+				035539001C9660C2C189C6FA /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -230,45 +183,6 @@
 			name = "PMSegmentedControlTests-iOS";
 			productName = PMSegmentedControlTests;
 			productReference = 5527A66F1C0CA18900CE1A81 /* PMSegmentedControl-Tests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
-		55EE6AF81C0CF23400DFB698 /* PMSegmentedControl-tvOS */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 55EE6B0A1C0CF23400DFB698 /* Build configuration list for PBXNativeTarget "PMSegmentedControl-tvOS" */;
-			buildPhases = (
-				55EE6AF41C0CF23400DFB698 /* Sources */,
-				55EE6AF51C0CF23400DFB698 /* Frameworks */,
-				55EE6AF61C0CF23400DFB698 /* Headers */,
-				55EE6AF71C0CF23400DFB698 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = "PMSegmentedControl-tvOS";
-			productName = "PMSegmentedControl-tvOS";
-			productReference = 55EE6AF91C0CF23400DFB698 /* PMSegmentedControl.framework */;
-			productType = "com.apple.product-type.framework";
-		};
-		55EE6B011C0CF23400DFB698 /* PMSegmentedControlTests-tvOS */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 55EE6B0D1C0CF23400DFB698 /* Build configuration list for PBXNativeTarget "PMSegmentedControlTests-tvOS" */;
-			buildPhases = (
-				C48642EBD7F5F522680E7506 /* Check Pods Manifest.lock */,
-				55EE6AFE1C0CF23400DFB698 /* Sources */,
-				55EE6AFF1C0CF23400DFB698 /* Frameworks */,
-				55EE6B001C0CF23400DFB698 /* Resources */,
-				253616971FCE91750B3D2F2C /* Embed Pods Frameworks */,
-				AAC17541E1D006FF0C34395B /* Copy Pods Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				55EE6B051C0CF23400DFB698 /* PBXTargetDependency */,
-			);
-			name = "PMSegmentedControlTests-tvOS";
-			productName = "PMSegmentedControl-tvOSTests";
-			productReference = 55EE6B021C0CF23400DFB698 /* PMSegmentedControl-Tests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -287,12 +201,6 @@
 					5527A66E1C0CA18900CE1A81 = {
 						CreatedOnToolsVersion = 7.1.1;
 					};
-					55EE6AF81C0CF23400DFB698 = {
-						CreatedOnToolsVersion = 7.1.1;
-					};
-					55EE6B011C0CF23400DFB698 = {
-						CreatedOnToolsVersion = 7.1.1;
-					};
 				};
 			};
 			buildConfigurationList = 5527A65F1C0CA18900CE1A81 /* Build configuration list for PBXProject "PMSegmentedControl" */;
@@ -309,8 +217,6 @@
 			targets = (
 				5527A6641C0CA18900CE1A81 /* PMSegmentedControl-iOS */,
 				5527A66E1C0CA18900CE1A81 /* PMSegmentedControlTests-iOS */,
-				55EE6AF81C0CF23400DFB698 /* PMSegmentedControl-tvOS */,
-				55EE6B011C0CF23400DFB698 /* PMSegmentedControlTests-tvOS */,
 			);
 		};
 /* End PBXProject section */
@@ -330,39 +236,10 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		55EE6AF71C0CF23400DFB698 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		55EE6B001C0CF23400DFB698 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		253616971FCE91750B3D2F2C /* Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PMSegmentedControlTests-tvOS/Pods-PMSegmentedControlTests-tvOS-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		32386645AA811A89A5F371FB /* Copy Pods Resources */ = {
+		035539001C9660C2C189C6FA /* Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -377,52 +254,7 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PMSegmentedControlTests-iOS/Pods-PMSegmentedControlTests-iOS-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		94ADDAB923D299BE9C1E165E /* Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Check Pods Manifest.lock";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
-			showEnvVarsInLog = 0;
-		};
-		AAC17541E1D006FF0C34395B /* Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PMSegmentedControlTests-tvOS/Pods-PMSegmentedControlTests-tvOS-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		C48642EBD7F5F522680E7506 /* Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Check Pods Manifest.lock";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
-			showEnvVarsInLog = 0;
-		};
-		FAC8BAD045584BEABEE8100A /* Embed Pods Frameworks */ = {
+		1F20ED76EF1742B8134EEDA1 /* Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -435,6 +267,21 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PMSegmentedControlTests-iOS/Pods-PMSegmentedControlTests-iOS-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D1BCDD6EEED4A918C07D1AAB /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -457,23 +304,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		55EE6AF41C0CF23400DFB698 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				55EE6B121C0CF30000DFB698 /* SegmentedControl.swift in Sources */,
-				55EE6B111C0CF30000DFB698 /* SegmentItem.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		55EE6AFE1C0CF23400DFB698 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				55EE6B131C0CF30400DFB698 /* SegmentedControlSpec.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -481,11 +311,6 @@
 			isa = PBXTargetDependency;
 			target = 5527A6641C0CA18900CE1A81 /* PMSegmentedControl-iOS */;
 			targetProxy = 5527A6711C0CA18900CE1A81 /* PBXContainerItemProxy */;
-		};
-		55EE6B051C0CF23400DFB698 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 55EE6AF81C0CF23400DFB698 /* PMSegmentedControl-tvOS */;
-			targetProxy = 55EE6B041C0CF23400DFB698 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -618,7 +443,7 @@
 		};
 		5527A67D1C0CA18900CE1A81 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 26ACE1AAC44F37B9C54F66CE /* Pods-PMSegmentedControlTests-iOS.debug.xcconfig */;
+			baseConfigurationReference = D7782E5C2A4A9EEED84D28D2 /* Pods-PMSegmentedControlTests-iOS.debug.xcconfig */;
 			buildSettings = {
 				INFOPLIST_FILE = "Tests/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -629,76 +454,12 @@
 		};
 		5527A67E1C0CA18900CE1A81 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 416D07183D9D52EC52156301 /* Pods-PMSegmentedControlTests-iOS.release.xcconfig */;
+			baseConfigurationReference = 8CEA0CB9B0D3B039B12B8397 /* Pods-PMSegmentedControlTests-iOS.release.xcconfig */;
 			buildSettings = {
 				INFOPLIST_FILE = "Tests/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.pierremarcairoldi.PMSegmentedControl-Tests";
 				PRODUCT_NAME = "PMSegmentedControl-Tests";
-			};
-			name = Release;
-		};
-		55EE6B0B1C0CF23400DFB698 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "Source/Supporting Files/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.pierremarcairoldi.PMSegmentedControl;
-				PRODUCT_NAME = PMSegmentedControl;
-				SDKROOT = appletvos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = 3;
-				TVOS_DEPLOYMENT_TARGET = 9.0;
-			};
-			name = Debug;
-		};
-		55EE6B0C1C0CF23400DFB698 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "Source/Supporting Files/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.pierremarcairoldi.PMSegmentedControl;
-				PRODUCT_NAME = PMSegmentedControl;
-				SDKROOT = appletvos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = 3;
-				TVOS_DEPLOYMENT_TARGET = 9.0;
-			};
-			name = Release;
-		};
-		55EE6B0E1C0CF23400DFB698 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 17D74330445D805BF0C416D3 /* Pods-PMSegmentedControlTests-tvOS.debug.xcconfig */;
-			buildSettings = {
-				INFOPLIST_FILE = "Tests/Supporting Files/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.pierremarcairoldi.PMSegmentedControl-Tests";
-				PRODUCT_NAME = "PMSegmentedControl-Tests";
-				SDKROOT = appletvos;
-				TVOS_DEPLOYMENT_TARGET = 9.0;
-			};
-			name = Debug;
-		};
-		55EE6B0F1C0CF23400DFB698 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = D62DF223D0F41710CB089A8A /* Pods-PMSegmentedControlTests-tvOS.release.xcconfig */;
-			buildSettings = {
-				INFOPLIST_FILE = "Tests/Supporting Files/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.pierremarcairoldi.PMSegmentedControl-Tests";
-				PRODUCT_NAME = "PMSegmentedControl-Tests";
-				SDKROOT = appletvos;
-				TVOS_DEPLOYMENT_TARGET = 9.0;
 			};
 			name = Release;
 		};
@@ -728,24 +489,6 @@
 			buildConfigurations = (
 				5527A67D1C0CA18900CE1A81 /* Debug */,
 				5527A67E1C0CA18900CE1A81 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		55EE6B0A1C0CF23400DFB698 /* Build configuration list for PBXNativeTarget "PMSegmentedControl-tvOS" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				55EE6B0B1C0CF23400DFB698 /* Debug */,
-				55EE6B0C1C0CF23400DFB698 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		55EE6B0D1C0CF23400DFB698 /* Build configuration list for PBXNativeTarget "PMSegmentedControlTests-tvOS" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				55EE6B0E1C0CF23400DFB698 /* Debug */,
-				55EE6B0F1C0CF23400DFB698 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

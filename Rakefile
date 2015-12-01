@@ -2,11 +2,15 @@ def workspace
   return 'PMSegmentedControl.xcworkspace'
 end
 
+def configuration
+  return 'Debug'
+end
+
 def targets
   return [
     :ios,
     # :osx,
-    :tvos
+    # :tvos
   ]
 end
 
@@ -29,7 +33,9 @@ end
 def devices
   return {
     ios: [
-      "OS='9.1',name='iPhone 6s'"
+      "OS='9.1',name='iPhone 6s'",
+      "OS='9.1',name='iPhone 6s Plus'",
+      "OS='9.1',name='iPad 2'"
     ],
     osx: [
       "arch='x86_64'"
@@ -40,12 +46,10 @@ def devices
   }
 end
 
-def run_tests(workspace, platform, xcprety_args: '--test')
-  configuration = 'Debug'
+def run(platform, tasks, xcprety_args: '')
   sdk = sdks[platform]
   scheme = schemes[platform]
   destinations = devices[platform]
-  tasks = 'build test'
 
   destinations.map { |destination|
     sh "set -o pipefail && xcodebuild -workspace '#{workspace}' -scheme '#{scheme}' -configuration '#{configuration}' -sdk #{sdk} -destination #{destination} #{tasks} | xcpretty -c #{xcprety_args}"
@@ -54,6 +58,6 @@ end
 
 desc 'Build, then run tests.'
 task :test do
-  targets.map { |platform| run_tests workspace, platform }
+  targets.map { |platform| run platform, 'build test', xcprety_args: '--test' }
   sh "killall Simulator"
 end

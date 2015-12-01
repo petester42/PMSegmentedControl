@@ -95,11 +95,12 @@ public final class SegmentedControl: UIControl {
     // MARK: Private Methods
     
     private func segmentAtIndex(index: Int) -> SegmentItem? {
-        if index >= segments.count || index < 0 {
+        
+        guard segments.indices.contains(index) else {
             return nil
-        } else {
-            return segments[index]
         }
+    
+        return segments[index]
     }
     
     private func updateItems(animated: Bool) {
@@ -152,9 +153,9 @@ public final class SegmentedControl: UIControl {
         }
         
         if animated {
-            UIView.animateWithDuration(0.4, animations: layoutSubviews)
+            UIView.animateWithDuration(0.4, animations: setNeedsLayout)
         } else {
-            layoutSubviews()
+            setNeedsLayout()
         }
     }
     
