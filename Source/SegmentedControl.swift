@@ -164,9 +164,9 @@ public final class SegmentedControl: Control {
         }
         
         if animated {
-            ViewType.animateWithDuration(0.4, animations: setNeedsLayout)
+            ViewType.animateWithDuration(0.4, animations: layoutSubviews)
         } else {
-            setNeedsLayout()
+            layoutSubviews()
         }
     }
     

@@ -5,8 +5,8 @@ end
 def targets
   return [
     :ios,
-    #:osx,
-    #:tvos
+    :osx,
+    :tvos
   ]
 end
 
@@ -33,12 +33,12 @@ def devices
       "OS='9.1',name='iPhone 6s Plus'",
       "OS='9.1',name='iPad 2'"
     ],
-    # osx: [
-    #   "arch='x86_64'"
-    # ],
-    # tvos: [
-    #   "OS='9.0',name='Apple TV 1080p'"
-    # ]
+    osx: [
+      "arch='x86_64'"
+    ],
+    tvos: [
+      "OS='9.0',name='Apple TV 1080p'"
+    ]
   }
 end
 

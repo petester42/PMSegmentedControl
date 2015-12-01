@@ -84,10 +84,10 @@ strip_invalid_archs() {
 
 
 if [[ "$CONFIGURATION" == "Debug" ]]; then
-  install_framework "Pods-PMSegmentedControlTests-iOS/Nimble.framework"
-  install_framework "Pods-PMSegmentedControlTests-iOS/Quick.framework"
+  install_framework "Pods-PMSegmentedControlTests-Mac/Nimble.framework"
+  install_framework "Pods-PMSegmentedControlTests-Mac/Quick.framework"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
-  install_framework "Pods-PMSegmentedControlTests-iOS/Nimble.framework"
-  install_framework "Pods-PMSegmentedControlTests-iOS/Quick.framework"
+  install_framework "Pods-PMSegmentedControlTests-Mac/Nimble.framework"
+  install_framework "Pods-PMSegmentedControlTests-Mac/Quick.framework"
 fi

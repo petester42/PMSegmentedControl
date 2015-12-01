@@ -30,8 +30,8 @@ extension ViewType {
     
     #elseif os(OSX)
 
-    public func setNeedsLayout() {
-        layoutSubtreeIfNeeded()
+    public func layoutSubviews() {
+        layout()
     }
 
     public class func animateWithDuration(duration: NSTimeInterval, animations: () -> Void) {
