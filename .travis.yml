@@ -7,6 +7,11 @@ env:
 
 cache:
   - bundler
+  - cocoapods
 
 script:
   - rake test
+
+after_success:
+  - bash <(curl -s https://codecov.io/bash)
+  - sleep 5
