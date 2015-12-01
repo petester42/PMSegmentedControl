@@ -9,9 +9,15 @@ cache:
   - bundler
   - cocoapods
 
+before_install:
+  - brew update
+  - brew install carthage || brew outdated carthage || brew upgrade carthage
+
+install:
+  - carthage bootstrap
+
 script:
   - rake test
 
 after_success:
   - bash <(curl -s https://codecov.io/bash)
-  - sleep 5
