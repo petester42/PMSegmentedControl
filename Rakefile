@@ -50,11 +50,10 @@ def run_tests(workspace, platform, xcprety_args: '--test')
   destinations.map { |destination|
     sh "set -o pipefail && xcodebuild -workspace '#{workspace}' -scheme '#{scheme}' -configuration '#{configuration}' -sdk #{sdk} -destination #{destination} #{tasks} | xcpretty -c #{xcprety_args}"
   }
-
-  sh "killall Simulator"
 end
 
 desc 'Build, then run tests.'
 task :test do
   targets.map { |platform| run_tests workspace, platform }
+  sh "killall Simulator"
 end
